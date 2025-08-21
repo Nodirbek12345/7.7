@@ -13,7 +13,7 @@ const Header = () => {
       </Link>
       <div className="flex items-center pl-[319px] pr-[138px] ">
         <NavLink
-          className="w-[80px] flex flex-col justify-center items-center h-[48px] text-red-500"
+          className="w-[80px] flex flex-col justify-center items-center h-[48px] text-white"
           to={"/"}
         >
           <img className="" src={afisha} alt="" />
@@ -43,10 +43,16 @@ const Header = () => {
       </div>
       <div className="text-white flex gap-[20px]">
         <select className="p-2" name="" id="">
-          <option className="bg-black" value="ru">ru</option>
-          <option className="bg-black" value="uz">uz</option>
+          <option className="bg-black" value="ru">
+            Ру
+          </option>
+          <option className="bg-black" value="uz">
+            Uz
+          </option>
         </select>
-        <button className="px-[67px] py-[14px] bg-red-500 text-[16px] rounded-2xl">Войти</button>
+        <button className="px-[67px] py-[14px] bg-red-500 text-[16px] rounded-2xl">
+          Войти
+        </button>
       </div>
     </div>
   );
