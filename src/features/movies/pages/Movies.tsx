@@ -24,13 +24,11 @@ const Movies = () => {
     label: name,
   }));
   const handleChange = (value: number) => {
-    // setPage(value)
     params.set("page", value.toString());
     setParams(params);
   };
   const handleChangeGenre = (value: string) => {
-    // setGenre(value);
-    params.set("laylo", value);
+    params.set("genre", value);
     setParams(params);
   };
   return (
@@ -44,12 +42,7 @@ const Movies = () => {
             placeholder="Все жанры"
             options={options}
           />
-          <Select
-            onChange={handleChangeGenre}
-            className="w-50"
-            placeholder="Все годы"
-            options={options}
-          />
+        
         </div>
       </div>
       <MovieView data={data?.results} />
