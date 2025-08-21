@@ -8,10 +8,7 @@ const MovieDetail = () => {
   const { id } = useParams();
   const { getMovieById, getMovieItems } = useMovie();
   const { data, isLoading } = getMovieById(Number(id));
-  const { data: images, isLoading: isLoadingImages } = getMovieItems(
-    Number(id),
-    "images"
-  );
+  const { data: images } = getMovieItems(Number(id), "images");
   const [sliceCount, setSliceCount] = useState(9);
   const { data: similarData } = getMovieItems(Number(id), "similar");
   const { data: creditsData } = getMovieItems(Number(id), "credits");
@@ -43,7 +40,9 @@ const MovieDetail = () => {
           <p className="mt-[30px] text-white">
             ⭐{data?.vote_average.toFixed(1)}
           </p>
-          <p className="mt-[30px] text-white">{(data?.runtime/60).toFixed(2)} час</p>
+          <p className="mt-[30px] text-white">
+            {(data?.runtime / 60).toFixed(2)} час
+          </p>
         </div>
       </div>
       <div className="flex flex-wrap gap-3">

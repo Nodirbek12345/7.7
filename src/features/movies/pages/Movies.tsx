@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { useMovie } from "../service/useMovie";
-
 import { Pagination, Select } from "antd";
 import { useSearchParams } from "react-router-dom";
 import { useGenre } from "../service/useGenre";
